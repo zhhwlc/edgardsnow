@@ -1,0 +1,59 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 左侧目录栏 */
+.sidebar {
+    width: 250px;
+    background-color: #8B0000; /* 深红色 */
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* 右侧内容区 */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* 章节标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+/* 目录项激活状态样式 */
+.sidebar a.active {
+    background-color: #FF0000;
+    border-left: 4px solid #FFFFFF;
+    padding-left: 16px;
+    margin-left: -20px;
+    display: block;
+}
+
+/* 目录项默认状态 */
+.sidebar a {
+    padding-left: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
